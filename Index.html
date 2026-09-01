@@ -24,6 +24,7 @@
         </div>
 
         <div class="datos-usuario">
+            <!-- Se guardará en un diccionario 'usuarios' -->
             <label for="nombre" class="etiqueta">NOMBRE COMPLETO</label>
             <input type="name" id="nombre" class="caja-texto" maxlength="100" />
 
@@ -43,33 +44,53 @@
         <div class="generos">
             <label>TIPO DE GÉNERO</label>
 
+            <!-- Se valida la cantidad de opciones (AL MENOS 1) -->
+            <!-- Se guardarán en un diccionario 'generos' aparte -->
             <div class="contenedor-generos">
-                <input type="checkbox" name="genero" id="ficcion">
-                <label for="ficcion">Ficción</label>
+                <label for="ficcion">
+                    <input type="checkbox" name="genero" id="ficcion">
+                    Ficción
+                </label>
 
-                <input type="checkbox" name="genero" id="terror">
-                <label for="terror">Terror</label>
+                <label for="terror">
+                    <input type="checkbox" name="genero" id="terror">
+                    Terror
+                </label>
 
-                <input type="checkbox" name="genero" id="misterio">
-                <label for="misterio">Misterio</label>
+                <label for="misterio">
+                    <input type="checkbox" name="genero" id="misterio">
+                    Misterio
+                </label>
+                
+                <label for="historico">
+                    <input type="checkbox" name="genero" id="historico">
+                    Histórico
+                </label>
+                
+                <label for="aventura">
+                    <input type="checkbox" name="genero" id="aventura">
+                    Aventura
+                </label>
 
-                <input type="checkbox" name="genero" id="historico">
-                <label for="historico">Histórico</label>
+                <label for="fantasia">
+                    <input type="checkbox" name="genero" id="fantasia">
+                    Fantasía
+                </label>
 
-                <input type="checkbox" name="genero" id="aventura">
-                <label for="aventura">Aventura</label>
+                <label for="ciencia-ficcion">
+                    <input type="checkbox" name="genero" id="ciencia-ficcion">
+                    Ciencia Ficción
+                </label>
 
-                <input type="checkbox" name="genero" id="fantasia">
-                <label for="fantasia">Fantasía</label>
+                <label for="biografia">
+                    <input type="checkbox" name="genero" id="biografia">
+                    Biografía
+                </label>
 
-                <input type="checkbox" name="genero" id="ciencia-ficcion">
-                <label for="ciencia-ficcion">Ciencia Ficción</label>
-
-                <input type="checkbox" name="genero" id="biografia">
-                <label for="biografia">Biografía</label>
-
-                <input type="checkbox" name="genero" id="romance">
-                <label for="romance">Romance</label>
+                <label for="romance">
+                    <input type="checkbox" name="genero" id="romance">
+                    Romance
+                </label>
             </div>
         </div>
 
