@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GAME ZONE</title>
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="Asset/estilos.scss">
 </head>
+
 <body>
     <header class="titulo">
         <a class="home">HOME</a>
@@ -19,8 +20,58 @@
             <p>Registro de usuario</p>
         </div>
 
-        <p>NOMBRE COMPLETO</p>
-        
+        <div class="datos-usuario">
+            <label for="nombre" class="etiqueta">NOMBRE COMPLETO</label>
+            <input type="name" id="nombre" class="caja-texto" maxlength="100" />
+
+            <label for="correo" class="etiqueta">CORREO ELECTRÓNICO</label>
+            <input type="email" id="correo" class="caja-texto" maxlength="60" />
+
+            <label for="contraseña" class="etiqueta">CONTRASEÑA</label>
+            <input type="password" id="contraseña" class="caja-texto" minlength="10" />
+
+            <label for="confirm-contraseña" class="etiqueta">CONFIRMAR CONTRASEÑA</label>
+            <input type="password" id="confirm-contraseña" class="caja-texto" />
+
+            <label for="telefono" class="etiqueta">TELÉFONO (opcional)</label>
+            <input type="tel" id="telefono" class="caja-texto" />
+        </div>
+
+        <div class="generos">
+            <label>TIPO DE GÉNERO</label>
+
+            <div class="contenedor-generos">
+                <input type="checkbox" name="genero" id="ficcion">
+                <label for="ficcion">Ficción</label>
+
+                <input type="checkbox" name="genero" id="terror">
+                <label for="terror">Terror</label>
+
+                <input type="checkbox" name="genero" id="misterio">
+                <label for="misterio">Misterio</label>
+
+                <input type="checkbox" name="genero" id="historico">
+                <label for="historico">Histórico</label>
+
+                <input type="checkbox" name="genero" id="aventura">
+                <label for="aventura">Aventura</label>
+
+                <input type="checkbox" name="genero" id="fantasia">
+                <label for="fantasia">Fantasía</label>
+
+                <input type="checkbox" name="genero" id="ciencia-ficcion">
+                <label for="ciencia-ficcion">Ciencia Ficción</label>
+
+                <input type="checkbox" name="genero" id="biografia">
+                <label for="biografia">Biografía</label>
+
+                <input type="checkbox" name="genero" id="romance">
+                <label for="romance">Romance</label>
+            </div>
+        </div>
+
+        <button class="btn-registrar">REGISTRAR</button>
+
     </section>
 </body>
 
