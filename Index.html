@@ -13,8 +13,8 @@
     <header class="titulo">
         <a class="home" href="Home.html">HOME</a>
         <h3>GAME ZONE</h3>
-        
-        
+
+
         <div class="botones">
             <a class="iniciar" href="Index.html">REGISTRARSE</a>
             <a class="iniciar" href="Login.html">INICIAR SESIÓN</a>
@@ -32,16 +32,16 @@
             <input type="name" id="nombre" class="caja-texto" maxlength="100" />
 
             <label for="correo" class="etiqueta">CORREO ELECTRÓNICO</label>
-            <input type="email" id="correo" class="caja-texto" maxlength="60" />
+            <input type="email" id="correo" class="caja-texto" maxlength="60" placeholder="Ej: usuario@duocuc.cl" />
 
             <label for="contraseña" class="etiqueta">CONTRASEÑA</label>
-            <input type="password" id="contraseña" class="caja-texto" minlength="10" />
+            <input type="password" id="contraseña" class="caja-texto" />
 
             <label for="confirm-contraseña" class="etiqueta">CONFIRMAR CONTRASEÑA</label>
             <input type="password" id="confirm-contraseña" class="caja-texto" />
 
             <label for="telefono" class="etiqueta">TELÉFONO (opcional)</label>
-            <input type="tel" id="telefono" class="caja-texto" />
+            <input type="tel" id="telefono" class="caja-texto" placeholder="Ej: 9 1234 5678" />
         </div>
 
         <div class="generos">
@@ -64,12 +64,12 @@
                     <input type="checkbox" name="genero" id="misterio">
                     Misterio
                 </label>
-                
+
                 <label for="historico">
                     <input type="checkbox" name="genero" id="historico">
                     Histórico
                 </label>
-                
+
                 <label for="aventura">
                     <input type="checkbox" name="genero" id="aventura">
                     Aventura
@@ -97,8 +97,9 @@
             </div>
         </div>
 
-        <button class="btn-registrar">REGISTRAR</button>
+        <button id="registro" class="btn-registrar">REGISTRAR</button>
 
     </section>
 </body>
+
 </html>
