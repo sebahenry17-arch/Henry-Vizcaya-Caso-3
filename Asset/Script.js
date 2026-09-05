@@ -176,6 +176,10 @@ if (botonRegistro) {
             console.log(`Usuario registrado con éxito: ${usuarios.get(idUsuario)}`);
             alert("¡Registro exitoso!");
 
+            // Guardamos el nombre del usuario en local por cómo lo guardamos en el Map
+            // Formato de la función setItem(clave, valor)
+            localStorage.setItem('usuarioActual', inputNombre.value.trim());
+
             window.location.href = "Home-logout.html";
         }
     });
@@ -186,19 +190,27 @@ if (botonRegistro) {
 
 
 
-function validarSesión() {
+function validarSesion() {
     let correoIngresado = inputCorreo.value.trim();
     let contrasenaIngresada = inputContrasena.value.trim();
     let usuarioRegistrado = false;
+    // Variable para guardar el nombre por fuera
+    let nombreUsuarioActual = "";
 
     usuarios.forEach((datosUsuario) => {
         if (datosUsuario[1] === correoIngresado && datosUsuario[2] === contrasenaIngresada) {
             usuarioRegistrado = true;
+            // Se rellena la variable
+            nombreUsuarioActual = datosUsuario[0];
         }
     })
 
     if (usuarioRegistrado) {
         alert("¡Bienvenido al sistema!");
+
+        // Se setea en local
+        localStorage.setItem('usuarioActual', nombreUsuarioActual);
+
         window.location.href = "Home-logout.html";
     } else {
         alert("Usuario o contraseña incorrectos.");
@@ -210,6 +222,18 @@ if (botonLogin) {
     botonLogin.addEventListener('click', (evento) => {
         evento.preventDefault();
 
-        validarSesión();
+        validarSesion();
     });
+}
+
+
+// Mostrar el nombre en el HOME
+
+// Se obtiene el elemento por el ID del HTML
+const spanNombre = document.getElementById('nombre-usuario');
+
+if (spanNombre) {
+    // Si no es null, va a insertar el nombre del usuario recién registrado
+    // Por la clave y devuelve el valor
+    spanNombre.textContent = localStorage.getItem('usuarioActual');
 }
