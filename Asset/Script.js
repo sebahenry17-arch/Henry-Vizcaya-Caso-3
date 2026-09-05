@@ -135,7 +135,7 @@ function validarCampos() {
 
     // Validación de géneros
     if (generosSeleccionados.length === 0) {
-        alert("Debes seleccionar al menos un tipo de género");
+        alert("Debes seleccionar al menos un tipo de género.");
         return false;
     }
 
@@ -201,7 +201,7 @@ function validarSesión() {
         alert("¡Bienvenido al sistema!");
         window.location.href = "Home-logout.html";
     } else {
-        alert("Usuario o contraseña incorrectos");
+        alert("Usuario o contraseña incorrectos.");
     }
 }
 
